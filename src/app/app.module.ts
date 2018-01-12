@@ -13,13 +13,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationService } from './authentication.service';
 import { UserService } from './user.service';
 import { SignupComponent } from './signup/signup.component';
+import { CoinMarketCapService } from './coin-market-cap.service';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   declarations: [
     AppComponent,
@@ -29,7 +32,7 @@ import { SignupComponent } from './signup/signup.component';
     DashboardComponent,
     SignupComponent
   ],
-  providers: [AuthenticationService, UserService],
+  providers: [AuthenticationService, UserService, CoinMarketCapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

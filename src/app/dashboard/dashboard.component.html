@@ -1,5 +1,16 @@
 <h1>Dashboard</h1>
 
-<p>
-  dashboard works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div style="display: block;">
+      <canvas baseChart width="400" height="400"
+              [data]="chartData"
+              [labels]="chartLabels"
+              [chartType]="chartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+</div>
+<br>
+<div id="bitcoinChart" class="bitcoin-chart">{{data}}</div>

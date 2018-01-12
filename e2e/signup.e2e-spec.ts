@@ -16,7 +16,7 @@ describe('signing up', () => {
     dashboardPage = new DashboardPage();
   });
 
-  describe('valid credentials', () => {
+  xdescribe('valid credentials', () => {
     beforeEach(() => {
       email = 'valid@example.com';
       password = 'ValidPassword123!';
